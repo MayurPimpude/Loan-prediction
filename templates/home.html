@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <title>Loan Defaultor</title>
+</head>
+<body>
+  
+  <header>
+
+    <nav class="bg-gray-800">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+             
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex flex-shrink-0 items-center">
+              <p class="text-white leading-relaxed">Fore-Loan</p>
+            </div>
+            <div class="hidden items-right sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2  rounded-md text-sm font-medium">Home</a>
+    
+                <a href="/predict" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Predict</a>
+    
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+    
+          <a href="/predict" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Predict</a>
+    
+          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    
+    
+    <!-- Background image -->
+    <div
+      class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover h-96 lg:h-screen"
+      style="background-image: url('/static/loan.jpg')"
+    >
+      <div
+        class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+        style="background-color: rgba(2, 56, 53, 0.7)"
+      >
+
+        <div class="flex justify-center items-center h-full">
+          <div class="text-white">
+
+            <h2 class="font-semibold text-5xl mb-4 font-light leading-relaxed">
+              Fore-Loan
+            </h2>
+
+            <h4 class="font-semibold text-xl mb-6">
+              We can predict whether your loan application is gone be rejected or accepted by the banks or other finicial institutions.
+            </h4>
+
+            <a
+              class="inline-block px-7 py-3 mb-1 border-2 border-gray-200 text-gray-200 font-medium text-sm leading-snug uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
+              href="/predict"
+              role="button"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+              >Lets Predict!</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Background image -->
+  </header>
+  
+
+  <h3 class="text-3xl text-center font-bold mt-5 mb-6 text-gray-800">Stages of Loan Origination</h3>
+
+  <ol class="border-l-2 mx-12 mt-5 border-blue-600">
+    <li>
+      <div class="flex flex-start items-center">
+        <div class="bg-blue-600 w-4 h-4 flex items-center justify-center rounded-full -ml-2 mr-3 -mt-2"></div>
+        <h4 class="text-gray-800 font-semibold text-xl -mt-2">Pre-Qualification Process</h4>
+      </div>
+      <div class="ml-6 mb-6 pb-6">
+        <a href="#!" class="text-blue-600 hover:text-blue-700 focus:text-blue-800 duration-300 transition ease-in-out text-sm">Stage 1</a>
+        
+        <p class="md:space-x-1 space-y-1 md:space-y-0 mb-4 mt-4">
+          <a class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+            Read more
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample1">
+          <div class="block p-6 rounded-lg shadow-lg bg-white">
+            <p class="text-gray-700 mt-2 mb-4">This is the first step in the Loan origination process. At this stage, the potential borrower will receive a list of items they need to submit to the lender to get a loan. This may include :</p>
+            <ul class="space-y-1 max-w-md list-disc list-inside text-gray-500 dark:text-gray-600">
+              <li>
+                ID Proof / Address proof: Voter ID, AADHAR, PAN CARD
+              </li>
+              <li>
+                Current Employment Information including Salary slip
+              </li>
+              <li>
+                Bank statement & Previous Loan Statement
+              </li>
+          </div>
+        </div>
+
+      </div>
+    </li>
+    <li>
+      <div class="flex flex-start items-center">
+        <div class="bg-blue-600 w-4 h-4 flex items-center justify-center rounded-full -ml-2 mr-3 -mt-2"></div>
+        <h4 class="text-gray-800 font-semibold text-xl -mt-2">Loan Application</h4>
+      </div>
+      <div class="ml-6 mb-6 pb-6">
+        <a href="#!" class="text-blue-600 hover:text-blue-700 focus:text-blue-800 duration-300 transition ease-in-out text-sm">Stage 2</a>
+
+        <!-- ReadMore -->
+
+        <p class="md:space-x-1 space-y-1 md:space-y-0 mb-4 mt-4">
+          <a class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+            Read more
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample2">
+          <div class="block p-6 rounded-lg shadow-lg bg-white">
+            <p class="text-gray-700 mt-2 mb-4">This is the second stage of the loan origination process. In this stage, the borrower completes the loan application. Sometimes this application can be paper-based, but today lenders are shifting towards an electronic version that makes this stage Paperless. New technologies allow completing the application online through website & mobile app, and collected data can be tailored to specific loan products.</p>
+        
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="flex flex-start items-center">
+        <div class="bg-blue-600 w-4 h-4 flex items-center justify-center rounded-full -ml-2 mr-3 -mt-2"></div>
+        <h4 class="text-gray-800 font-semibold text-xl -mt-2"> Application Processing</h4>
+      </div>
+      <div class="ml-6 mb-6 pb-6">
+        <a href="#!" class="text-blue-600 hover:text-blue-700 focus:text-blue-800 duration-300 transition ease-in-out text-sm">Stage 3</a>
+        <!-- ReadMore -->
+
+        <p class="md:space-x-1 space-y-1 md:space-y-0 mb-4 mt-4">
+          <a class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+            Read more
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample3">
+          <div class="block p-6 rounded-lg shadow-lg bg-white">
+            <p class="text-gray-700 mt-2 mb-4">At this stage, the application is received by the credit department and the first step done by the department is to review it for accuracy, genuine & Completeness. If all the required fields are not completed, the application will be returned to the borrower or the credit analyst and they will reach out the borrower to procure the missing information.
+              Lenders use LOAN ORIGINATION SYSTEM (LOS) to know the creditworthiness of the borrowers.</p>
+          </div>
+        </div>
+        
+      </div>
+    </li>
+
+    <li>
+      <div class="flex flex-start items-center">
+        <div class="bg-blue-600 w-4 h-4 flex items-center justify-center rounded-full -ml-2 mr-3 -mt-2"></div>
+        <h4 class="text-gray-800 font-semibold text-xl -mt-2">Underwriting Process</h4>
+      </div>
+      <div class="ml-6 mb-6 pb-6">
+        <a href="#!" class="text-blue-600 hover:text-blue-700 focus:text-blue-800 duration-300 transition ease-in-out text-sm">Stage 4</a>
+        <!-- ReadMore -->
+        <p class="md:space-x-1 space-y-1 md:space-y-0 mb-4 mt-4">
+          <a class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+            Read more
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample4">
+          <div class="block p-6 rounded-lg shadow-lg bg-white">
+            <p class="text-gray-700 mt-2 mb-4">Now Lender checks the application taking a variety of components into account: credit score, risk scores, and many lenders generate their own unique criteria for scoring that can be unique to their business or industry. Nowadays, this process is fully automated with the help of a rule engine & API integrations with Credit scoring engine’s (CIBIL, EXPERIAN etc. ) in LOS. In a rule engine, the lender can load underwriting guidelines specific to products</p>
+          </div>
+        </div>
+
+      </div>
+    </li>
+
+    <li>
+      <div class="flex flex-start items-center">
+        <div class="bg-blue-600 w-4 h-4 flex items-center justify-center rounded-full -ml-2 mr-3 -mt-2"></div>
+        <h4 class="text-gray-800 font-semibold text-xl -mt-2">Credit Decision</h4>
+      </div>
+      <div class="ml-6 mb-6 pb-6">
+        <a href="#!" class="text-blue-600 hover:text-blue-700 focus:text-blue-800 duration-300 transition ease-in-out text-sm">Stage 5</a>
+
+        <!-- ReadMore -->
+        <p class="md:space-x-1 space-y-1 md:space-y-0 mb-4 mt-4">
+          <a class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5">
+            Read more
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample5">
+          <div class="block p-6 rounded-lg shadow-lg bg-white">
+            <p class="text-gray-700 mt-2 mb-4">Depending on the results from the underwriting process, an application will be approved, denied or sent back to the originator for additional information. If certain criteria’s don’t match according to the rule engine set in the system, there can be an automatic change in the parameters, such as reduced loan amount or different interest rates.</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 mt-2 mb-4"></p>
+        
+      </div>
+    </li>
+
+    <li>
+      <div class="flex flex-start items-center">
+        <div class="bg-blue-600 w-4 h-4 flex items-center justify-center rounded-full -ml-2 mr-3 -mt-2"></div>
+        <h4 class="text-gray-800 font-semibold text-xl -mt-2">Loan Funding</h4>
+      </div>
+      <div class="ml-6 mb-6 pb-6">
+        <a href="#!" class="text-blue-600 hover:text-blue-700 focus:text-blue-800 duration-300 transition ease-in-out text-sm">Stage 6</a>
+
+        <!-- ReadMore -->
+        <p class="md:space-x-1 space-y-1 md:space-y-0 mb-4 mt-4">
+          <a class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample6">
+            Read more
+          </a>
+        </p>
+        <div class="collapse" id="collapseExample6">
+          <div class="block p-6 rounded-lg shadow-lg bg-white">
+            <p class="text-gray-700 mt-2 mb-4">Most loans fund shortly after the loan documents are signed. Second mortgage loans, Business loans, Loan against property and lines of credit may require additional time for legal and compliance reasons. LOS can track funding and ensure that all necessary documents are executed before or together with funding.</p>
+          </div>
+        </div>
+        
+      </div>
+    </li>
+  </ol>
+
+
+<section class="mt-8 mb-10 text-gray-700">
+  <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto">
+    <div class="h-auto w-full">
+      <h3 class="text-3xl font-bold mb-6 text-gray-800">Testimonials</h3>
+    </div>
+    
+    <p class="mb-6 pb-2 md:mb-12 md:pb-0">
+      The Reviews of website and information provided by the website from various people.
+    </p>
+  </div>
+
+  <div class="grid mx-4 md:grid-cols-3 gap-6 text-center">
+    <div>
+      <div class="block rounded-lg shadow-lg bg-white">
+        <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #9d789b;"></div>
+        <div class="w-24 -mt-12 overflow-hidden border border-2 border-white rounded-full mx-auto bg-white">
+          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp" />
+        </div>
+        <div class="p-6">
+          <h4 class="text-2xl font-semibold mb-4">Sam Marks</h4>
+          <hr />
+          <p class="mt-4">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
+            </svg>
+            Helped to understand whether loan application is gone be rejected or accepted.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="block rounded-lg shadow-lg bg-white">
+        <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #7a81a8;"></div>
+        <div class="w-24 -mt-12 overflow-hidden border border-2 border-white rounded-full mx-auto bg-white">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp" />
+        </div>
+        <div class="p-6">
+          <h4 class="text-2xl font-semibold mb-4">Lisa Cudrow</h4>
+          <hr />
+          <p class="mt-4">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
+            </svg>
+            Was great user experience seamless.The information provided helps better to a user.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="block rounded-lg shadow-lg bg-white">
+        <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #6d5b98;"></div>
+        <div class="w-24 -mt-12 overflow-hidden border border-2 border-white rounded-full mx-auto bg-white">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" />
+        </div>
+        <div class="p-6">
+          <h4 class="text-2xl font-semibold mb-4">John Smith</h4>
+          <hr />
+          <p class="mt-4">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
+            </svg>
+            This website helped me to understand the stages of Loan application.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <footer class="bg-gray-900 text-center lg:text-left">
+    <div class="text-gray-200 text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-gray-200">Fore-Loan</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+</html>
